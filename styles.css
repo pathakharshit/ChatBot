@@ -39,6 +39,7 @@ html,body {
   flex-direction: column; 
   background: var(--whatsapp-chat-bg);
   position: relative;
+  min-height: 0;
 }
 
 .chat-topbar{ 
@@ -51,6 +52,7 @@ html,body {
   height: 60px;
   box-sizing: border-box;
   border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .top-left{ 
@@ -136,6 +138,7 @@ html,body {
     radial-gradient(circle at 75px 75px, rgba(255,255,255,0.02) 2%, transparent 0%);
   background-size: 100px 100px;
   background-position: 0 0, 50px 50px;
+  min-height: 0;
 }
 
 /* Messages */
@@ -226,6 +229,9 @@ html,body {
   background: var(--compose-bg); 
   align-items: flex-end;
   border-top: 1px solid var(--border-color);
+  flex-shrink: 0; /* Add this line */
+  position: relative; /* Add this line */
+  z-index: 10; 
 }
 
 .input-wrapper {
