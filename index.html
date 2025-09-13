@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatBot</title>
-    <link rel = "stylesheet" href = "styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal AI — Chat</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-box" id="chat-box">
-             
-             
+  <div class="app">
+    <!-- Chat Panel - Full Width -->
+    <main class="chat-panel">
+      <header class="chat-topbar">
+        <div class="top-left">
+          <div class="profile-pic-wrapper">
+            <img class="top-pic" src="https://via.placeholder.com/40/00a884/ffffff?text=AI" alt="avatar" />
+            <span class="status-dot"></span>
+          </div>
+          <div class="top-meta">
+            <div class="top-name">Personal AI</div>
+            <div class="top-status" id="header-status">online</div>
+          </div>
         </div>
-        <div class="input-area">
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button id="send-button">➤</button>
+        <div class="top-actions">
+          <button class="action-btn" title="Search">🔍</button>
+          <button class="action-btn" title="Menu">⋮</button>
         </div>
-    </div>
+      </header>
 
-    <script src = "index.js"></script>
+      <section class="chat-box" id="chat-box">
+        <div class="empty-state">
+          <div class="empty-state-icon">💬</div>
+          <div class="empty-state-text">Start a conversation</div>
+          <div class="empty-state-subtext">Send a message to begin chatting with your Personal AI</div>
+        </div>
+      </section>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <div class="input-wrapper">
+          <textarea id="user-input" placeholder="Type a message" rows="1"></textarea>
+        </div>
+        <button id="send-button" type="submit" disabled>➤</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
