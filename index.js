@@ -3,6 +3,7 @@ const userInput = document.getElementById("user-input");
 const chatBox = document.getElementById("chat-box");
 let chatHistory = [];
 
+// JS File
 sendBtn.addEventListener("click", async () => {
     const input = userInput.value;
     userInput.value = "";
