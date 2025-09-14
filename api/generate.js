@@ -28,6 +28,8 @@ export default async function handler(req, res) {
             body: JSON.stringify(content),
         });
 
+        console.log(response);
+
         if (!response.ok) {
             res.status(response.status).json({ error: response.statusText });
             return;
