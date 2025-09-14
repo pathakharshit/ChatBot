@@ -158,7 +158,7 @@ async function generateResponse(userText){
     });
     
     if (!resp.ok) {
-      throw new Error(`HTTP error! status: ${resp.status}`);
+      throw new Error(`HTTP error! status: ${resp.status} statusMessage : ${resp.statusText}`);
     }
     
     const data = await resp.json();
