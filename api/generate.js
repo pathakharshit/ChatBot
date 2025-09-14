@@ -28,9 +28,11 @@ export default async function handler(req, res) {
             body: JSON.stringify(content),
         });
 
-        console.log(response);
-
         if (!response.ok) {
+            console.log("Status:", response.status);
+            console.log("StatusText:", response.statusText);
+            const errorText = await response.text();
+            console.log("Error body:", errorText);
             res.status(response.status).json({ error: response.statusText });
             return;
         }
