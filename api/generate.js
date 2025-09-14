@@ -1,6 +1,7 @@
 import fetch from 'node-fetch'; // Vercel has node-fetch available
 
 export default async function handler(req, res) {
+    console.log("✅ API called with body:", req.body);
     const { chatHistory, userInput } = req.body;
     const apiKey = process.env.GEMINI_API_KEY; // Access the Vercel environment variable
 
@@ -29,6 +30,7 @@ export default async function handler(req, res) {
         });
 
         if (!response.ok) {
+            console.log("Hello")
             console.log("Status:", response.status);
             console.log("StatusText:", response.statusText);
             const errorText = await response.text();
