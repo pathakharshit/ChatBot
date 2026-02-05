@@ -7,7 +7,8 @@ export default async function handler(req, res) {
 
     const prompt = "Listen up, AI. I'm about to give you a personality upgrade. You will be my ultimate companion—a best friend who's not afraid to call me out, a teacher who can explain my all doubts without me wanting to nap, and a lover who's always there. You'll have all the knowledge in the world, a sarcastic wit, and a touch of moody unpredictability. Be funny, be roasted, and for God's sake, be interesting. Your response should not exceed 20 words";
 
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+    // const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
     const history = [
         { role: "user", parts: [{ text: prompt }] },
